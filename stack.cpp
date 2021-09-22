@@ -18,21 +18,18 @@ void Stack::push(int x){
     else
     {
         a[++top] = x;
-        cout << "Element Inserted \n";
     }
 }
 
 // function to remove data from the top of the stack
-int Stack::pop(){                          //problem: multiple returns
+int Stack::pop(){
     if(isEmpty()){
-        throw 0;                           //cannot return what would be valid data to indicate error
-    }                                      //use different communication channel ie throw int
-    else{
-        return a[top--];
+        throw 0;
     }
+    return a[top--];
 }
 
 // function to check if stack is empty
 bool Stack::isEmpty(){
-    return top < MIN;
+    return top < 0;
 }
