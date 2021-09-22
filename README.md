@@ -1,2 +1,2 @@
-# empty
-empty repository with only a readme
+practice for using a stack data structure
+reconfiguring bad code

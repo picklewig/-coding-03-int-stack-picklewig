@@ -9,26 +9,11 @@
 
 #include "stack.h"
 
-class Stack{
-    int top;
-public:
-    int a[MAX];  //Maximum size of Stack
-    Stack()
-    {
-        top = -1;
-    }
-
-    // declaring all the function
-    void push(int x);
-    int pop();
-    void isEmpty();
-};
-
 // function to insert data into stack
 void Stack::push(int x){
-    if(top >= MAX)
+    if(top >= MAX)                        //bug: no location greater than 10
     {
-        cout << "Stack Overflow \n";
+        cout << "Stack Overflow \n";      //problem: no printing
     }
     else
     {
@@ -38,38 +23,16 @@ void Stack::push(int x){
 }
 
 // function to remove data from the top of the stack
-int Stack::pop(){
-    if(top < 0)
-    {
-        cout << "Stack Underflow \n";
-        return 0;
-    }
-    else
-    {
-        int d = a[top--];
-        return d;
+int Stack::pop(){                          //problem: multiple returns
+    if(isEmpty()){
+        throw 0;                           //cannot return what would be valid data to indicate error
+    }                                      //use different communication channel ie throw int
+    else{
+        return a[top--];
     }
 }
 
 // function to check if stack is empty
-void Stack::isEmpty(){
-    if(top < 0)
-    {
-        cout << "Stack is empty \n";
-    }
-    else
-    {
-        cout << "Stack is not empty \n";
-    }
-}
-
-// main function
-int main(){
-
-    Stack s1;
-    s1.push(10);
-    s1.push(100);
-    /*
-        preform whatever operation you want on the stack
-    */
+bool Stack::isEmpty(){
+    return top < MIN;
 }
