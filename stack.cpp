@@ -11,22 +11,33 @@
 
 // function to insert data into stack
 void Stack::push(int x){
-    if(top >= MAX)                        //bug: no location greater than 10
+    if(top < MAX)
     {
-        cout << "Stack Overflow \n";      //problem: no printing
+        a[++top] = x;
+        cout << "added to stack: " << a[top] << endl;
     }
     else
     {
-        a[++top] = x;
+        cout << "stack overflow" << endl;
+        throw 0;
     }
 }
 
 // function to remove data from the top of the stack
 int Stack::pop(){
     if(isEmpty()){
+        cout << "stack underflow" << endl;
         throw 0;
     }
+    cout << "pulled from stack: " << a[top] << endl;
     return a[top--];
+}
+
+int Stack::peek(){
+    if(isEmpty()){
+        throw 0;
+    }
+    return a[top];
 }
 
 // function to check if stack is empty

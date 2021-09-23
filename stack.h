@@ -14,9 +14,10 @@ using std::cout;
 using std::endl;
 
 class Stack{
+    private:
         int top;
-    public:
         int a[MAX];  //Maximum size of Stack
+    public:
         Stack(){
             top = -1;
         }
@@ -24,6 +25,7 @@ class Stack{
         // declaring all the function
         void push(int x);
         int pop();
+        int peek();
         bool isEmpty();
 };
 #endif //L3_SHEPHERD_STACK_H
