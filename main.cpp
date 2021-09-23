@@ -10,14 +10,22 @@ int main(int argc, char** argv){
 
     Stack s1;
     Stack s2;
-    for(int index{0}; index<MAX+2; index++){
-        s1.push(10);
+
+    for(int index{0}; index<MAX+100; index++){
+        try{
+            s1.push(5);
+        }
+        catch(int errorNum){
+            cout << "stack overflow" << endl;
+        }
     }
 
-    for(int index{0}; index<MAX; index++){
-        s1.pop();
+    for(int index{0}; index<MAX+1000; index++){
+        try{
+            s1.pop();
+        }
+        catch(int errorNum){
+            cout << "stack underflow" << endl;
+        }
     }
-    /*
-        preform whatever operation you want on the stack
-    */
 }

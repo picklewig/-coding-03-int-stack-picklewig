@@ -11,14 +11,12 @@
 
 // function to insert data into stack
 void Stack::push(int x){
-    if(top < MAX)
+    if(top < MAX-1)
     {
         a[++top] = x;
-        cout << "added to stack: " << a[top] << endl;
     }
     else
     {
-        cout << "stack overflow" << endl;
         throw 0;
     }
 }
