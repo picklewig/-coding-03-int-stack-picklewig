@@ -7,4 +7,6 @@
 
 #include "stack.h"
 
+using std::rand;
+
 #endif //L3_SHEPHERD_MAIN_H

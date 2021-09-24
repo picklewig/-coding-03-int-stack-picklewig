@@ -24,10 +24,8 @@ void Stack::push(int x){
 // function to remove data from the top of the stack
 int Stack::pop(){
     if(isEmpty()){
-        cout << "stack underflow" << endl;
         throw 0;
     }
-    cout << "pulled from stack: " << a[top] << endl;
     return a[top--];
 }
 
