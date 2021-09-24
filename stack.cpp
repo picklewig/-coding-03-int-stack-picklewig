@@ -1,5 +1,8 @@
-/**********
-* Created by Isaac on 9/20/2021.
+/***********
+ * file: stack.cpp
+ * author: Isaac Shepherd
+ * only includes stack.h for calling on Class Stack for prototypes
+ * and definition for MAX
 ***********/
 
 

@@ -1,5 +1,8 @@
 /************
-* Created by Isaac on 9/20/2021.
+file: main.cpp
+author: Isaac Shepherd
+This file is the testbed for class Stack and calling its methods
+only includes main.h
 ***********/
 
 #include "main.h"
@@ -59,8 +62,6 @@ int main(int argc, char** argv){
             cout << "stack underflow, cannot pop from an empty stack" << endl;
         }
     }
-
-
     //peeking into empty stack
     try{
         cout << s1.peek() << " was peeked in stack" << endl;

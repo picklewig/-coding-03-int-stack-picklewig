@@ -1,12 +1,15 @@
-//
-// Created by Isaac on 9/20/2021.
-//
+/***********
+ * file: stack.h
+ * author: Isaac Shepherd
+ * header file for stack.cpp, does not include other files,
+ * most important file in project, holds definitions and prototypes that are called from
+ * different files
+***********/
 
 #ifndef L3_SHEPHERD_STACK_H
 #define L3_SHEPHERD_STACK_H
 
 #define MAX 10
-#define MIN 0
 
 #include <iostream>
 
