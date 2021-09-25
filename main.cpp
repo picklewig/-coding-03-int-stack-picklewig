@@ -16,7 +16,7 @@ int main(int argc, char** argv){
         int operationNum = (rand() % 3);
         switch(operationNum){
             case 0:
-                try{
+                try{ //not supposed to throw from push
                     s1.push(rand() % 10);
                     cout << "adding number to stack" << endl;
                 }

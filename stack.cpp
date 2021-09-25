@@ -2,7 +2,7 @@
  * file: stack.cpp
  * author: Isaac Shepherd
  * only includes stack.h for calling on Class Stack for prototypes
- * and definition for MAX
+ * and definition for MAX, file defines methods for class Stack
 ***********/
 
 
@@ -12,16 +12,17 @@
 
 #include "stack.h"
 
+Stack::Stack(){
+    top = -1;
+}
+
 // function to insert data into stack
-void Stack::push(int x){
+bool Stack::push(int x){
     if(top < MAX-1)
     {
         a[++top] = x;
     }
-    else
-    {
-        throw 0;
-    }
+    return top > MAX;
 }
 
 // function to remove data from the top of the stack

@@ -9,6 +9,10 @@
 #define L3_SHEPHERD_MAIN_H
 
 #include "stack.h"
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 using std::rand;
 
