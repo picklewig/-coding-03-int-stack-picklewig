@@ -16,12 +16,12 @@ int main(int argc, char** argv){
         int operationNum = (rand() % 3);
         switch(operationNum){
             case 0:
-                try{ //not supposed to throw from push
-                    s1.push(rand() % 10);
+                //not supposed to throw from push
+                if(s1.push(rand() % 10)){
                     cout << "adding number to stack" << endl;
                 }
-                catch(int errorNum){
-                    cout << "stack overflow, cannot push to a full stack" << endl;
+                else{
+                    cout << "stack overflow, cannot push to full stack" << endl;
                 }
                 break;
             case 1:
@@ -46,11 +46,11 @@ int main(int argc, char** argv){
 
     //manual case entries
     for(int index{0}; index<MAX+1; index++){
-        try{
-            s1.push(5);
+        if(s1.push(rand() % 10)){
+            cout << "adding number to stack" << endl;
         }
-        catch(int errorNum){
-            cout << "stack overflow, cannot push to a full stack" << endl;
+        else{
+            cout << "stack overflow, cannot push to full stack" << endl;
         }
     }
 

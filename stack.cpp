@@ -22,7 +22,7 @@ bool Stack::push(int x){
     {
         a[++top] = x;
     }
-    return top > MAX;
+    return top < MAX-1;
 }
 
 // function to remove data from the top of the stack
